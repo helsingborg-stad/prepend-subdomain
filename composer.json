@@ -3,9 +3,14 @@
     "description": "Filter through WP content and adds a subdomain in realtime.",
     "type": "wordpress-plugin",
     "license": "MIT",
+    "scripts": {
+        "test": "./vendor/bin/phpunit --testdox",
+        "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit --testdox",
+        "minimal": "./vendor/bin/phpunit"
+    },
     "autoload": {
         "psr-4": {
-            "HelsingborgStad\\PrependSubdomain\\": "source/"
+            "PrependSubdomain\\": "source/"
         }
     },
     "authors": [
@@ -15,5 +20,10 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require-dev": {
+        "brain/monkey": "^2.6",
+        "codedungeon/phpunit-result-printer": "dev-master",
+        "phpunit/phpunit": "9.5.x-dev",
+        "spatie/phpunit-watcher": "dev-master"
+    }
 }
