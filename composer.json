@@ -1,0 +1,19 @@
+{
+    "name": "helsingborg-stad/prepend-subdomain",
+    "description": "Filter through WP content and adds a subdomain in realtime.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "HelsingborgStad\\PrependSubdomain\\": "source/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joel Bernerman",
+            "email": "joel.bernerman@helsingborg.se"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
