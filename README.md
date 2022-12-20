@@ -19,11 +19,35 @@
 </p>
 
 ## Summary
-Warning! The usage of this plugin can be higly destructive to your database content by design!
+**Warning!**  
+The usage of this plugin is higly destructive to your database content by design!  
+This should not be used on a production environment.
 
-Filters different WP content output and adds a defined subdomain to all content in realtime.
-Example usage would be for staging/test environment where we don´t want to do an entire search and replace in a large database.
+The plugin adds WP CLI command for prepending of subdomains in nessessary tables.  
+Filters different WP content output and adds a defined subdomain to all content in realtime.  
+Example usage would be for staging/test environment where we don´t want to do an entire search and replace in a large database.  
 For quick cloning of production environments.
+
+## Config
+Sub domain in real time replacement is defaulted to `stage`.  
+You can override it with `PREPEND_SUBDOMAIN` constant. 
+```php
+define('PREPEND_SUBDOMAIN', 'alternative')
+```
+would replace in realtime `example.com` -> `alternative.example.com`
+
+## Example workflow
+Clone your environment with code files, media and database.  
+Using wp cli activate the plugin.  
+```bash
+wp plugin activate prepend-subdomain
+```
+To replace the nessessary database values and prepend your subdomain. ie. `example.com` -> `stage.example.com`
+```bash
+wp prepend stage
+```
+The plugin itself with replace any existing domains `https://example.com` -> `https://stage.example.com` in realtime.
+
 
 ## Contributing
 

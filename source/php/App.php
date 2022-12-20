@@ -19,8 +19,6 @@ class App
         }
     }
 
-
-
     public function prependSubdomain($content)
     {
         $hosts = $this->getDomainReplacement(home_url('/'));
