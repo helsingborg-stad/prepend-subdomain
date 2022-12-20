@@ -16,10 +16,12 @@ if (!defined('WPINC')) {
     die;
 }
 
+if (!defined('PREPEND_SUBDOMAIN')) {
+    define('PREPEND_SUBDOMAIN', 'stage');
+}
+
 define('PREPEND_SUBDOMAIN_PATH', plugin_dir_path(__FILE__));
 define('PREPEND_SUBDOMAIN_URL', plugins_url('', __FILE__));
-
-load_plugin_textdomain(PREPEND_SUBDOMAIN_TEXT_DOMAIN, false, plugin_basename(dirname(__FILE__)) . '/languages');
 
 require_once PREPEND_SUBDOMAIN_PATH . 'Public.php';
 
@@ -27,4 +29,4 @@ require_once PREPEND_SUBDOMAIN_PATH . 'Public.php';
 require __DIR__ . '/vendor/autoload.php';
 
 // Start application
-new PrependSubdomain\App();
+new \PrependSubdomain\App();

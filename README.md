@@ -19,14 +19,11 @@
 </p>
 
 ## Summary
+Warning! The usage of this plugin can be higly destructive to your database content by design!
+
 Filters different WP content output and adds a defined subdomain to all content in realtime.
 Example usage would be for staging/test environment where we don´t want to do an entire search and replace in a large database.
 For quick cloning of production environments.
-
-## Roadmap
-This repo is part of a project called Mitt Helsingborg. See the [project backlog](https://share.clickup.com/l/h/6-33382576-1/763b706816dbf53) for a complete list of upcoming features, known issues and releases.
-
-
 
 ## Contributing
 
