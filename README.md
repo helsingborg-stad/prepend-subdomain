@@ -29,7 +29,7 @@ Example usage would be for staging/test environment where we don´t want to do a
 For quick cloning of production environments.
 
 ## Config
-Sub domain in real time replacement is defaulted to `stage`.  
+Subdomain in real time replacement is defaulted to `stage`.  
 You can override it with `PREPEND_SUBDOMAIN` constant. 
 ```php
 define('PREPEND_SUBDOMAIN', 'alternative')
